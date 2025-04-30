@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 252 100% 67%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Bai Jamjuree font utilities */
+.font-bai-jamjuree {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+.bai-jamjuree-thin {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 200;
+}
+
+.bai-jamjuree-light {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 300;
+}
+
+.bai-jamjuree-regular {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 400;
+}
+
+.bai-jamjuree-medium {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 500;
+}
+
+.bai-jamjuree-semibold {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+}
+
+.bai-jamjuree-bold {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 700;
+}
+
+.bai-jamjuree-thin-italic {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.bai-jamjuree-light-italic {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.bai-jamjuree-regular-italic {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bai-jamjuree-medium-italic {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.bai-jamjuree-semibold-italic {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.bai-jamjuree-bold-italic {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-700;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: var(--radius);
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: calc(var(--radius) + 1px);
+  padding: 1px;
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
