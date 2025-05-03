@@ -1,9 +1,11 @@
 "use client";
 
+import Logo from "@/app/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -31,7 +33,7 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="font-bold text-xl md:text-2xl gradient-text"
           >
-            SquadLog
+            <Image src={Logo} alt="Logo" width={200} height={40} />
           </motion.div>
         </Link>
 

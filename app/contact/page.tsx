@@ -1,19 +1,20 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { motion } from "framer-motion";
+import { Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent } from "@/components/ui/card"
-import PageTransition from "@/components/page-transition"
-import SectionHeading from "@/components/section-heading"
+import PageTransition from "@/components/page-transition";
+import SectionHeading from "@/components/section-heading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { sendContactForm } from "./actions";
 
 // Animation variants
 const fadeIn = {
@@ -27,7 +28,7 @@ const fadeIn = {
       ease: "easeOut",
     },
   }),
-}
+};
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -37,7 +38,7 @@ const staggerContainer = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -45,25 +46,36 @@ export default function ContactPage() {
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // In a real application, you would handle form submission here
-    console.log("Form submitted:", formData)
-    alert("Thank you for your message! We'll get back to you soon.")
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+
+    const res = await sendContactForm(formData);
+
+    if (res.success) {
+      setStatus("success");
+      alert("Your message has been sent!");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } else {
+      setStatus("error");
+      setErrorMessage(res.error || "Something went wrong.");
+    }
+  };
 
   return (
     <PageTransition>
@@ -77,7 +89,11 @@ export default function ContactPage() {
 
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Contact Form */}
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <Card className="bg-secondary/20 border-border/40">
                 <CardContent className="p-6">
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -147,8 +163,17 @@ export default function ContactPage() {
             >
               <div className="glass-card rounded-2xl p-6">
                 <h3 className="text-xl font-bold mb-6">Contact Information</h3>
-                <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="space-y-6">
-                  <motion.div variants={fadeIn} custom={0} className="flex items-start gap-4">
+                <motion.div
+                  variants={staggerContainer}
+                  initial="hidden"
+                  animate="visible"
+                  className="space-y-6"
+                >
+                  <motion.div
+                    variants={fadeIn}
+                    custom={0}
+                    className="flex items-start gap-4"
+                  >
                     <div className="bg-secondary/50 rounded-full p-2 mt-1">
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
@@ -163,7 +188,11 @@ export default function ContactPage() {
                     </div>
                   </motion.div>
 
-                  <motion.div variants={fadeIn} custom={1} className="flex items-start gap-4">
+                  <motion.div
+                    variants={fadeIn}
+                    custom={1}
+                    className="flex items-start gap-4"
+                  >
                     <div className="bg-secondary/50 rounded-full p-2 mt-1">
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
@@ -178,7 +207,11 @@ export default function ContactPage() {
                     </div>
                   </motion.div>
 
-                  <motion.div variants={fadeIn} custom={2} className="flex items-start gap-4">
+                  <motion.div
+                    variants={fadeIn}
+                    custom={2}
+                    className="flex items-start gap-4"
+                  >
                     <div className="bg-secondary/50 rounded-full p-2 mt-1">
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
@@ -197,11 +230,13 @@ export default function ContactPage() {
               <div className="glass-card rounded-2xl p-6">
                 <h3 className="text-xl font-bold mb-4">Schedule a Call</h3>
                 <p className="text-muted-foreground mb-6">
-                  Book a free 15-minute discovery call to discuss your project and how we can help.
+                  Book a free 15-minute discovery call to discuss your project
+                  and how we can help.
                 </p>
                 <div className="bg-secondary/20 rounded-xl p-4 text-center">
                   <p className="text-muted-foreground mb-4">
-                    Calendly integration would appear here, allowing visitors to schedule a meeting directly.
+                    Calendly integration would appear here, allowing visitors to
+                    schedule a meeting directly.
                   </p>
                   <Button className="bg-gradient-to-r from-indigo-500 to-purple-700 hover:from-indigo-600 hover:to-purple-800 transition-all">
                     Schedule Now
@@ -219,7 +254,9 @@ export default function ContactPage() {
           <div className="max-w-5xl mx-auto">
             <div className="glass-card rounded-2xl overflow-hidden aspect-video">
               <div className="w-full h-full bg-secondary/20 flex items-center justify-center">
-                <p className="text-muted-foreground">Interactive map would be embedded here</p>
+                <p className="text-muted-foreground">
+                  Interactive map would be embedded here
+                </p>
               </div>
             </div>
           </div>
@@ -238,29 +275,38 @@ export default function ContactPage() {
 
             <div className="space-y-8">
               <div className="glass-card rounded-2xl p-6">
-                <h3 className="text-xl font-bold mb-2">What is your typical process for new projects?</h3>
+                <h3 className="text-xl font-bold mb-2">
+                  What is your typical process for new projects?
+                </h3>
                 <p className="text-muted-foreground">
-                  Our process typically begins with a discovery call to understand your needs, followed by a proposal
-                  and project plan. Once approved, we move into design, development, testing, and launch phases, with
-                  regular check-ins throughout.
+                  Our process typically begins with a discovery call to
+                  understand your needs, followed by a proposal and project
+                  plan. Once approved, we move into design, development,
+                  testing, and launch phases, with regular check-ins throughout.
                 </p>
               </div>
 
               <div className="glass-card rounded-2xl p-6">
-                <h3 className="text-xl font-bold mb-2">How long does a typical project take?</h3>
+                <h3 className="text-xl font-bold mb-2">
+                  How long does a typical project take?
+                </h3>
                 <p className="text-muted-foreground">
-                  Project timelines vary based on scope and complexity. A simple website might take 4-6 weeks, while a
-                  complex web application could take 3-6 months. We'll provide a detailed timeline during the proposal
-                  phase.
+                  Project timelines vary based on scope and complexity. A simple
+                  website might take 4-6 weeks, while a complex web application
+                  could take 3-6 months. We'll provide a detailed timeline
+                  during the proposal phase.
                 </p>
               </div>
 
               <div className="glass-card rounded-2xl p-6">
-                <h3 className="text-xl font-bold mb-2">Do you offer ongoing support after launch?</h3>
+                <h3 className="text-xl font-bold mb-2">
+                  Do you offer ongoing support after launch?
+                </h3>
                 <p className="text-muted-foreground">
-                  Yes, we offer various maintenance and support packages to keep your digital products running smoothly
-                  after launch. These can include regular updates, security monitoring, content updates, and technical
-                  support.
+                  Yes, we offer various maintenance and support packages to keep
+                  your digital products running smoothly after launch. These can
+                  include regular updates, security monitoring, content updates,
+                  and technical support.
                 </p>
               </div>
             </div>
@@ -268,5 +314,5 @@ export default function ContactPage() {
         </div>
       </section>
     </PageTransition>
-  )
+  );
 }

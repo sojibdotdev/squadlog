@@ -1,4 +1,6 @@
+import Logo from "@/app/assets/logo.png";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -7,7 +9,7 @@ export default function Footer() {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold gradient-text">SquadLog</h3>
+            <Image src={Logo} alt="Logo" width={200} height={40} />
             <p className="text-muted-foreground text-sm">
               We build exceptional digital experiences for forward-thinking
               businesses.
