@@ -133,7 +133,7 @@ export default function Home() {
                   variant="outline"
                   className="gradient-border font-bai-jamjuree"
                 >
-                  <Link href="/portfolio">View Our Work</Link>
+                  <Link href="/case-studies">View Our Work</Link>
                 </Button>
               </div>
             </motion.div>
