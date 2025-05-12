@@ -1,6 +1,7 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { WhatsAppButton } from "@/components/whats-app-button";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type React from "react";
@@ -35,7 +36,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} bg-gradient-to-b from-[#0f172a] to-[#1e293b] min-h-screen font-bai-jamjuree`}
+        className={`${inter.className} bg-gradient-to-b from-[#0f172a] to-[#1e293b] min-h-screen font-bai-jamjuree relative`}
       >
         <ThemeProvider
           attribute="class"
@@ -44,7 +45,9 @@ export default function RootLayout({
           forcedTheme="dark"
         >
           <div className="flex min-h-screen flex-col">
+            <WhatsAppButton />
             <Navbar />
+
             <main className="flex-1">{children}</main>
             <Footer />
           </div>

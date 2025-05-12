@@ -1,5 +1,12 @@
 "use client";
 
+import SquadLog_Cloud_Computing_Service from "@/app/assets/Services - SquadLog/SquadLog - Cloud Computing Service.png";
+import SquadLog_Logo_Design from "@/app/assets/Services - SquadLog/SquadLog - Logo Design.png";
+import SquadLog_Meta_Ads from "@/app/assets/Services - SquadLog/SquadLog - Meta Ads.png";
+import SquadLog_Mobile_App_Development from "@/app/assets/Services - SquadLog/SquadLog - Mobile App Development.png";
+import SquadLog_UI_UX_Design from "@/app/assets/Services - SquadLog/SquadLog - UI_UX Design.png";
+import SquadLog_Web_Development from "@/app/assets/Services - SquadLog/SquadLog - Web Development.png";
+import SquadLog_WordPress_Development from "@/app/assets/Services - SquadLog/SquadLog - WordPress Development.png";
 import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
@@ -27,7 +34,7 @@ const services = [
     shortDescription:
       "Custom websites and web applications built with modern technologies.",
     icon: "Code",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
+    coverImage: SquadLog_Web_Development,
     longDescription:
       "Our web development services deliver cutting-edge websites and applications that drive business growth. We combine technical expertise with creative design to build solutions that are both beautiful and functional.",
     features: [
@@ -144,7 +151,7 @@ const services = [
     shortDescription:
       "Native and cross-platform mobile applications for iOS and Android.",
     icon: "Smartphone",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
+    coverImage: SquadLog_Mobile_App_Development,
     longDescription:
       "We create powerful, intuitive mobile applications that engage users and drive business growth. Our mobile development team builds native and cross-platform apps that deliver exceptional user experiences across all devices.",
     features: [
@@ -268,7 +275,7 @@ const services = [
     shortDescription:
       "User-centered design that creates intuitive and engaging digital experiences.",
     icon: "Palette",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
+    coverImage: SquadLog_UI_UX_Design,
     longDescription:
       "Our UI/UX design services focus on creating intuitive, engaging user experiences that delight your customers and achieve your business goals. We combine aesthetic appeal with functional design to create interfaces that users love.",
     features: [
@@ -387,7 +394,7 @@ const services = [
     shortDescription:
       "Strategic marketing solutions to grow your online presence and drive conversions.",
     icon: "BarChart",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
+    coverImage: SquadLog_Meta_Ads,
     longDescription:
       "Our digital marketing services help you reach your target audience, build brand awareness, and drive conversions. We create data-driven strategies tailored to your business goals and market position.",
     features: [
@@ -498,75 +505,72 @@ const services = [
       },
     ],
   },
+
   {
-    id: 5,
-    title: "E-commerce Solutions",
-    slug: "e-commerce",
+    id: 6,
+    title: "Cloud Computing",
+    slug: "cloud-computing",
     shortDescription:
-      "Custom online stores that drive sales and provide exceptional shopping experiences.",
-    icon: "ShoppingCart",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
+      "Tailored software solutions that solve your unique business challenges.",
+    icon: "Settings",
+    coverImage: SquadLog_Cloud_Computing_Service,
     longDescription:
-      "Our e-commerce solutions help businesses sell products and services online with custom storefronts that are designed to convert. We build scalable, secure online stores that provide seamless shopping experiences.",
+      "Our custom software development services deliver tailored solutions that address your specific business challenges. We build scalable, maintainable software that streamlines operations and drives growth.",
     features: [
       {
-        title: "Custom Storefronts",
-        description: "Unique designs that reflect your brand",
+        title: "Bespoke Solutions",
+        description: "Software built specifically for your needs",
       },
       {
-        title: "Payment Integration",
-        description: "Secure, flexible payment options",
+        title: "Scalable Architecture",
+        description: "Systems that grow with your business",
       },
       {
-        title: "Inventory Management",
-        description: "Efficient product and stock control",
+        title: "Integration Capabilities",
+        description: "Connect with your existing tools",
       },
       {
-        title: "Analytics & Reporting",
-        description: "Data-driven insights for growth",
+        title: "Ongoing Support",
+        description: "Continuous improvement and maintenance",
       },
     ],
     process: [
       {
-        title: "Discovery",
-        description: "Understanding your products and customers",
+        title: "Requirements Analysis",
+        description: "Defining your software needs in detail",
       },
       {
-        title: "Architecture",
-        description: "Planning your store structure and features",
+        title: "System Design",
+        description: "Creating the technical architecture",
       },
+      { title: "Development", description: "Building your custom solution" },
       {
-        title: "Design",
-        description: "Creating an engaging shopping experience",
+        title: "Quality Assurance",
+        description: "Rigorous testing to ensure reliability",
       },
-      {
-        title: "Development",
-        description: "Building your custom e-commerce platform",
-      },
-      { title: "Testing", description: "Ensuring everything works flawlessly" },
-      { title: "Launch", description: "Taking your store live" },
+      { title: "Deployment", description: "Implementing your software" },
+      { title: "Maintenance", description: "Ongoing support and improvements" },
     ],
     faqs: [
       {
-        question: "Which e-commerce platform do you recommend?",
+        question: "How much does custom software development cost?",
         answer:
-          "We work with various platforms including Shopify, WooCommerce, and custom solutions. Our recommendation depends on your specific needs, product volume, customization requirements, and budget.",
+          "Custom software costs vary widely based on complexity and requirements. Small projects typically start at $50,000, while enterprise solutions can range from $100,000 to $500,000+. We provide detailed estimates after understanding your specific needs.",
       },
       {
-        question: "Can you migrate my existing online store?",
+        question: "How long does custom software development take?",
         answer:
-          "Yes, we can migrate your existing store to a new platform while preserving your products, customers, and order history. We ensure a smooth transition with minimal disruption to your business.",
+          "Development timelines typically range from 4-12 months depending on project scope. We often use an agile approach to deliver functionality in phases, allowing you to start using parts of the system earlier.",
       },
       {
-        question:
-          "Do you integrate with payment gateways and shipping providers?",
+        question: "Do you provide documentation and training?",
         answer:
-          "Absolutely. We integrate with all major payment gateways (Stripe, PayPal, etc.) and shipping providers to create a seamless checkout experience for your customers.",
+          "Yes, we provide comprehensive documentation for all custom software, including user guides and technical documentation. We also offer training sessions to ensure your team can effectively use the new system.",
       },
       {
-        question: "How do you handle e-commerce security?",
+        question: "What happens after the software is launched?",
         answer:
-          "Security is paramount for e-commerce. We implement SSL certificates, PCI compliance, secure payment processing, regular security updates, and follow best practices to protect your store and customer data.",
+          "We offer ongoing maintenance and support packages to ensure your software continues to run smoothly. This includes bug fixes, security updates, and feature enhancements as your business evolves.",
       },
     ],
     pricing: [
@@ -619,13 +623,245 @@ const services = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Custom Software Development",
     slug: "custom-software",
     shortDescription:
       "Tailored software solutions that solve your unique business challenges.",
     icon: "Settings",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
+    coverImage: SquadLog_Meta_Ads,
+    longDescription:
+      "Our custom software development services deliver tailored solutions that address your specific business challenges. We build scalable, maintainable software that streamlines operations and drives growth.",
+    features: [
+      {
+        title: "Bespoke Solutions",
+        description: "Software built specifically for your needs",
+      },
+      {
+        title: "Scalable Architecture",
+        description: "Systems that grow with your business",
+      },
+      {
+        title: "Integration Capabilities",
+        description: "Connect with your existing tools",
+      },
+      {
+        title: "Ongoing Support",
+        description: "Continuous improvement and maintenance",
+      },
+    ],
+    process: [
+      {
+        title: "Requirements Analysis",
+        description: "Defining your software needs in detail",
+      },
+      {
+        title: "System Design",
+        description: "Creating the technical architecture",
+      },
+      { title: "Development", description: "Building your custom solution" },
+      {
+        title: "Quality Assurance",
+        description: "Rigorous testing to ensure reliability",
+      },
+      { title: "Deployment", description: "Implementing your software" },
+      { title: "Maintenance", description: "Ongoing support and improvements" },
+    ],
+    faqs: [
+      {
+        question: "How much does custom software development cost?",
+        answer:
+          "Custom software costs vary widely based on complexity and requirements. Small projects typically start at $50,000, while enterprise solutions can range from $100,000 to $500,000+. We provide detailed estimates after understanding your specific needs.",
+      },
+      {
+        question: "How long does custom software development take?",
+        answer:
+          "Development timelines typically range from 4-12 months depending on project scope. We often use an agile approach to deliver functionality in phases, allowing you to start using parts of the system earlier.",
+      },
+      {
+        question: "Do you provide documentation and training?",
+        answer:
+          "Yes, we provide comprehensive documentation for all custom software, including user guides and technical documentation. We also offer training sessions to ensure your team can effectively use the new system.",
+      },
+      {
+        question: "What happens after the software is launched?",
+        answer:
+          "We offer ongoing maintenance and support packages to ensure your software continues to run smoothly. This includes bug fixes, security updates, and feature enhancements as your business evolves.",
+      },
+    ],
+    pricing: [
+      {
+        name: "Essential",
+        price: 4999,
+        description: "Basic UI/UX design for simple projects",
+        features: [
+          "User Research",
+          "Information Architecture",
+          "Wireframing",
+          "Basic Visual Design",
+          "Up to 5 Screens",
+          "2 Rounds of Revisions",
+        ],
+        popular: false,
+      },
+      {
+        name: "Comprehensive",
+        price: 9999,
+        description: "Complete design solution for complex projects",
+        features: [
+          "In-depth User Research",
+          "Persona Development",
+          "User Journey Mapping",
+          "Wireframing & Prototyping",
+          "High-fidelity Visual Design",
+          "Up to 15 Screens",
+          "Usability Testing",
+          "3 Rounds of Revisions",
+        ],
+        popular: true,
+      },
+      {
+        name: "Enterprise",
+        price: 19999,
+        description: "Premium design for large-scale applications",
+        features: [
+          "Everything in Comprehensive",
+          "Unlimited Screens",
+          "Design System Creation",
+          "Animation & Micro-interactions",
+          "Accessibility Compliance",
+          "Multi-platform Design",
+          "Extensive Usability Testing",
+          "5 Rounds of Revisions",
+        ],
+        popular: false,
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: "WordPress Development",
+    slug: "wordPress-development",
+    shortDescription:
+      "Tailored software solutions that solve your unique business challenges.",
+    icon: "Settings",
+    coverImage: SquadLog_WordPress_Development,
+    longDescription:
+      "Our custom software development services deliver tailored solutions that address your specific business challenges. We build scalable, maintainable software that streamlines operations and drives growth.",
+    features: [
+      {
+        title: "Bespoke Solutions",
+        description: "Software built specifically for your needs",
+      },
+      {
+        title: "Scalable Architecture",
+        description: "Systems that grow with your business",
+      },
+      {
+        title: "Integration Capabilities",
+        description: "Connect with your existing tools",
+      },
+      {
+        title: "Ongoing Support",
+        description: "Continuous improvement and maintenance",
+      },
+    ],
+    process: [
+      {
+        title: "Requirements Analysis",
+        description: "Defining your software needs in detail",
+      },
+      {
+        title: "System Design",
+        description: "Creating the technical architecture",
+      },
+      { title: "Development", description: "Building your custom solution" },
+      {
+        title: "Quality Assurance",
+        description: "Rigorous testing to ensure reliability",
+      },
+      { title: "Deployment", description: "Implementing your software" },
+      { title: "Maintenance", description: "Ongoing support and improvements" },
+    ],
+    faqs: [
+      {
+        question: "How much does custom software development cost?",
+        answer:
+          "Custom software costs vary widely based on complexity and requirements. Small projects typically start at $50,000, while enterprise solutions can range from $100,000 to $500,000+. We provide detailed estimates after understanding your specific needs.",
+      },
+      {
+        question: "How long does custom software development take?",
+        answer:
+          "Development timelines typically range from 4-12 months depending on project scope. We often use an agile approach to deliver functionality in phases, allowing you to start using parts of the system earlier.",
+      },
+      {
+        question: "Do you provide documentation and training?",
+        answer:
+          "Yes, we provide comprehensive documentation for all custom software, including user guides and technical documentation. We also offer training sessions to ensure your team can effectively use the new system.",
+      },
+      {
+        question: "What happens after the software is launched?",
+        answer:
+          "We offer ongoing maintenance and support packages to ensure your software continues to run smoothly. This includes bug fixes, security updates, and feature enhancements as your business evolves.",
+      },
+    ],
+    pricing: [
+      {
+        name: "Essential",
+        price: 4999,
+        description: "Basic UI/UX design for simple projects",
+        features: [
+          "User Research",
+          "Information Architecture",
+          "Wireframing",
+          "Basic Visual Design",
+          "Up to 5 Screens",
+          "2 Rounds of Revisions",
+        ],
+        popular: false,
+      },
+      {
+        name: "Comprehensive",
+        price: 9999,
+        description: "Complete design solution for complex projects",
+        features: [
+          "In-depth User Research",
+          "Persona Development",
+          "User Journey Mapping",
+          "Wireframing & Prototyping",
+          "High-fidelity Visual Design",
+          "Up to 15 Screens",
+          "Usability Testing",
+          "3 Rounds of Revisions",
+        ],
+        popular: true,
+      },
+      {
+        name: "Enterprise",
+        price: 19999,
+        description: "Premium design for large-scale applications",
+        features: [
+          "Everything in Comprehensive",
+          "Unlimited Screens",
+          "Design System Creation",
+          "Animation & Micro-interactions",
+          "Accessibility Compliance",
+          "Multi-platform Design",
+          "Extensive Usability Testing",
+          "5 Rounds of Revisions",
+        ],
+        popular: false,
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "Graphic Design",
+    slug: "graphic-design",
+    shortDescription:
+      "Tailored software solutions that solve your unique business challenges.",
+    icon: "Settings",
+    coverImage: SquadLog_Logo_Design,
     longDescription:
       "Our custom software development services deliver tailored solutions that address your specific business challenges. We build scalable, maintainable software that streamlines operations and drives growth.",
     features: [
@@ -797,7 +1033,7 @@ export default function ServiceDetailPage() {
   return (
     <PageTransition>
       {/* Hero Section */}
-      <section className="py-20">
+      <section className=" pt-5">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center text-center space-y-8">
             <motion.div
@@ -818,22 +1054,23 @@ export default function ServiceDetailPage() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative w-full max-w-5xl aspect-video rounded-2xl overflow-hidden glass-card"
+              className="relative  rounded-2xl overflow-hidden glass-card"
             >
               <Image
                 src={service.coverImage || "/placeholder.svg"}
                 alt={service.title}
-                width={1920}
-                height={1080}
-                className="object-cover"
+                width={960}
+                height={365}
+                className="object-fill aspect-[12/4] "
               />
+              <div className=" bg-black/50 absolute top-0 w-full bottom-0"></div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Content Tabs Section */}
-      <section className="py-16">
+      <section className="py-10">
         <div className="container px-4 md:px-6">
           <Tabs
             defaultValue="overview"

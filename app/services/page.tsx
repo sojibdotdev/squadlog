@@ -1,16 +1,31 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { ArrowRight, BarChart, Code, Palette, Settings, ShoppingCart, Smartphone } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import PageTransition from "@/components/page-transition"
-import SectionHeading from "@/components/section-heading"
-import { services } from "@/lib/data"
+import PageTransition from "@/components/page-transition";
+import SectionHeading from "@/components/section-heading";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { services } from "@/lib/data";
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  BarChart,
+  Brush,
+  Cloud,
+  Code,
+  Palette,
+  Settings,
+  Smartphone,
+} from "lucide-react";
+import Link from "next/link";
+import { FaWordpress } from "react-icons/fa6";
 
 // Animation variants
 const fadeIn = {
@@ -24,7 +39,7 @@ const fadeIn = {
       ease: "easeOut",
     },
   }),
-}
+};
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -34,7 +49,7 @@ const staggerContainer = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 // Map service slugs to icons
 const serviceIcons: Record<string, React.ReactNode> = {
@@ -42,9 +57,12 @@ const serviceIcons: Record<string, React.ReactNode> = {
   "mobile-apps": <Smartphone className="h-10 w-10 text-primary" />,
   "ui-ux-design": <Palette className="h-10 w-10 text-primary" />,
   "digital-marketing": <BarChart className="h-10 w-10 text-primary" />,
-  "e-commerce": <ShoppingCart className="h-10 w-10 text-primary" />,
+  "cloud-computing": <Cloud className="h-10 w-10 text-primary" />,
+  "wordPress-development": <FaWordpress className="h-10 w-10 text-primary" />,
+  "app-development": <Settings className="h-10 w-10 text-primary" />,
+  "graphic-design": <Brush className="h-10 w-10 text-primary" />,
   "custom-software": <Settings className="h-10 w-10 text-primary" />,
-}
+};
 
 export default function ServicesPage() {
   return (
@@ -64,14 +82,22 @@ export default function ServicesPage() {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {services.map((service, index) => (
-              <motion.div key={service.id} variants={fadeIn} custom={index} whileHover={{ y: -10 }} className="h-full">
+              <motion.div
+                key={service.id}
+                variants={fadeIn}
+                custom={index}
+                whileHover={{ y: -10 }}
+                className="h-full"
+              >
                 <Card className="h-full bg-secondary/20 border-border/40 overflow-hidden">
                   <CardHeader>
                     <div className="bg-secondary/50 rounded-xl w-14 h-14 flex items-center justify-center mb-4">
                       {serviceIcons[service.slug]}
                     </div>
                     <CardTitle>{service.title}</CardTitle>
-                    <CardDescription>{service.shortDescription}</CardDescription>
+                    <CardDescription>
+                      {service.shortDescription}
+                    </CardDescription>
                   </CardHeader>
                   <CardFooter>
                     <Button asChild variant="ghost" className="group">
@@ -99,9 +125,12 @@ export default function ServicesPage() {
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text">Not Sure Which Service You Need?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold gradient-text">
+                Not Sure Which Service You Need?
+              </h2>
               <p className="text-xl text-muted-foreground">
-                Let's discuss your project and find the perfect solution for your business.
+                Let's discuss your project and find the perfect solution for
+                your business.
               </p>
               <Button
                 asChild
@@ -115,5 +144,5 @@ export default function ServicesPage() {
         </div>
       </section>
     </PageTransition>
-  )
+  );
 }

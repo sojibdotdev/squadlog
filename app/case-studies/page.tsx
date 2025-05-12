@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+import Medical_Tourist_Logo_Design from "@/app/assets/Case Studies/Medical Tourist Logo Design.webp";
 import PageTransition from "@/components/page-transition";
 import SectionHeading from "@/components/section-heading";
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +14,18 @@ import { Button } from "@/components/ui/button";
 
 // Sample portfolio data
 const portfolioItems = [
+  {
+    id: 10,
+    title: "Medical Tourist Logo Design",
+    description:
+      "A complete e-commerce solution with inventory management and payment processing.",
+    image: Medical_Tourist_Logo_Design,
+    category: "Graphic Design",
+    client: "RetailTech Inc.",
+    completionDate: "January 2023",
+    link: "#",
+    technologies: ["Adobe Illustrator", "Adobe Photoshop", "Google Fonts"],
+  },
   {
     id: 1,
     title: "E-commerce Platform",

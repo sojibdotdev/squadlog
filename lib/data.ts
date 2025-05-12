@@ -4,22 +4,44 @@ export const services = [
     id: 1,
     title: "Web Development",
     slug: "web-development",
-    shortDescription: "Custom websites and web applications built with modern technologies.",
+    shortDescription:
+      "Custom websites and web applications built with modern technologies.",
     icon: "Code",
     coverImage: "/images/services/web-development.jpg",
     longDescription:
       "Our web development services deliver cutting-edge websites and applications that drive business growth. We combine technical expertise with creative design to build solutions that are both beautiful and functional.",
     features: [
-      { title: "Responsive Design", description: "Websites that work perfectly on all devices" },
-      { title: "Custom CMS", description: "Easy content management tailored to your needs" },
-      { title: "Performance Optimization", description: "Lightning-fast loading speeds" },
-      { title: "SEO-Friendly", description: "Built with search engines in mind" },
+      {
+        title: "Responsive Design",
+        description: "Websites that work perfectly on all devices",
+      },
+      {
+        title: "Custom CMS",
+        description: "Easy content management tailored to your needs",
+      },
+      {
+        title: "Performance Optimization",
+        description: "Lightning-fast loading speeds",
+      },
+      {
+        title: "SEO-Friendly",
+        description: "Built with search engines in mind",
+      },
     ],
     process: [
-      { title: "Discovery", description: "Understanding your business goals and requirements" },
+      {
+        title: "Discovery",
+        description: "Understanding your business goals and requirements",
+      },
       { title: "Planning", description: "Creating a roadmap for your project" },
-      { title: "Design", description: "Crafting beautiful and intuitive interfaces" },
-      { title: "Development", description: "Building your solution with clean, efficient code" },
+      {
+        title: "Design",
+        description: "Crafting beautiful and intuitive interfaces",
+      },
+      {
+        title: "Development",
+        description: "Building your solution with clean, efficient code",
+      },
       { title: "Testing", description: "Ensuring everything works perfectly" },
       { title: "Launch", description: "Deploying your project to the world" },
     ],
@@ -47,27 +69,123 @@ export const services = [
     ],
   },
   {
+    id: 7,
+    title: "Cloud Computing",
+    slug: "cloud-computing",
+    shortDescription:
+      "Tailored software solutions that solve your unique business challenges.",
+    icon: "Settings",
+    coverImage: "/images/services/custom-software.jpg",
+    longDescription:
+      "Our custom software development services deliver tailored solutions that address your specific business challenges. We build scalable, maintainable software that streamlines operations and drives growth.",
+    features: [
+      {
+        title: "Bespoke Solutions",
+        description: "Software built specifically for your needs",
+      },
+      {
+        title: "Scalable Architecture",
+        description: "Systems that grow with your business",
+      },
+      {
+        title: "Integration Capabilities",
+        description: "Connect with your existing tools",
+      },
+      {
+        title: "Ongoing Support",
+        description: "Continuous improvement and maintenance",
+      },
+    ],
+    process: [
+      {
+        title: "Requirements Analysis",
+        description: "Defining your software needs in detail",
+      },
+      {
+        title: "System Design",
+        description: "Creating the technical architecture",
+      },
+      { title: "Development", description: "Building your custom solution" },
+      {
+        title: "Quality Assurance",
+        description: "Rigorous testing to ensure reliability",
+      },
+      { title: "Deployment", description: "Implementing your software" },
+      { title: "Maintenance", description: "Ongoing support and improvements" },
+    ],
+    faqs: [
+      {
+        question: "How much does custom software development cost?",
+        answer:
+          "Custom software costs vary widely based on complexity and requirements. Small projects typically start at $50,000, while enterprise solutions can range from $100,000 to $500,000+. We provide detailed estimates after understanding your specific needs.",
+      },
+      {
+        question: "How long does custom software development take?",
+        answer:
+          "Development timelines typically range from 4-12 months depending on project scope. We often use an agile approach to deliver functionality in phases, allowing you to start using parts of the system earlier.",
+      },
+      {
+        question: "Do you provide documentation and training?",
+        answer:
+          "Yes, we provide comprehensive documentation for all custom software, including user guides and technical documentation. We also offer training sessions to ensure your team can effectively use the new system.",
+      },
+      {
+        question: "What happens after the software is launched?",
+        answer:
+          "We offer ongoing maintenance and support packages to ensure your software continues to run smoothly. This includes bug fixes, security updates, and feature enhancements as your business evolves.",
+      },
+    ],
+  },
+  {
     id: 2,
     title: "Mobile App Development",
     slug: "mobile-apps",
-    shortDescription: "Native and cross-platform mobile applications for iOS and Android.",
+    shortDescription:
+      "Native and cross-platform mobile applications for iOS and Android.",
     icon: "Smartphone",
     coverImage: "/images/services/mobile-apps.jpg",
     longDescription:
       "We create powerful, intuitive mobile applications that engage users and drive business growth. Our mobile development team builds native and cross-platform apps that deliver exceptional user experiences across all devices.",
     features: [
-      { title: "Cross-Platform Development", description: "Build once, deploy everywhere" },
-      { title: "Native Performance", description: "Fast, responsive applications" },
-      { title: "Offline Functionality", description: "Apps that work without internet" },
-      { title: "Push Notifications", description: "Engage users with timely updates" },
+      {
+        title: "Cross-Platform Development",
+        description: "Build once, deploy everywhere",
+      },
+      {
+        title: "Native Performance",
+        description: "Fast, responsive applications",
+      },
+      {
+        title: "Offline Functionality",
+        description: "Apps that work without internet",
+      },
+      {
+        title: "Push Notifications",
+        description: "Engage users with timely updates",
+      },
     ],
     process: [
-      { title: "Strategy", description: "Defining your app's purpose and target audience" },
-      { title: "Wireframing", description: "Creating the blueprint for your app" },
-      { title: "UI/UX Design", description: "Designing intuitive user interfaces" },
-      { title: "Development", description: "Building your app with clean, efficient code" },
+      {
+        title: "Strategy",
+        description: "Defining your app's purpose and target audience",
+      },
+      {
+        title: "Wireframing",
+        description: "Creating the blueprint for your app",
+      },
+      {
+        title: "UI/UX Design",
+        description: "Designing intuitive user interfaces",
+      },
+      {
+        title: "Development",
+        description: "Building your app with clean, efficient code",
+      },
       { title: "Testing", description: "Ensuring your app works flawlessly" },
-      { title: "Deployment", description: "Launching your app to the app stores" },
+      {
+        title: "Deployment",
+        description: "Launching your app to the app stores",
+      },
     ],
     faqs: [
       {
@@ -96,23 +214,48 @@ export const services = [
     id: 3,
     title: "UI/UX Design",
     slug: "ui-ux-design",
-    shortDescription: "User-centered design that creates intuitive and engaging digital experiences.",
+    shortDescription:
+      "User-centered design that creates intuitive and engaging digital experiences.",
     icon: "Palette",
     coverImage: "/images/services/ui-ux-design.jpg",
     longDescription:
       "Our UI/UX design services focus on creating intuitive, engaging user experiences that delight your customers and achieve your business goals. We combine aesthetic appeal with functional design to create interfaces that users love.",
     features: [
-      { title: "User Research", description: "Understanding your users' needs and behaviors" },
-      { title: "Wireframing & Prototyping", description: "Visualizing ideas before development" },
-      { title: "Visual Design", description: "Creating beautiful, consistent interfaces" },
-      { title: "Usability Testing", description: "Ensuring your product is intuitive to use" },
+      {
+        title: "User Research",
+        description: "Understanding your users' needs and behaviors",
+      },
+      {
+        title: "Wireframing & Prototyping",
+        description: "Visualizing ideas before development",
+      },
+      {
+        title: "Visual Design",
+        description: "Creating beautiful, consistent interfaces",
+      },
+      {
+        title: "Usability Testing",
+        description: "Ensuring your product is intuitive to use",
+      },
     ],
     process: [
-      { title: "Research", description: "Understanding users and business requirements" },
-      { title: "Information Architecture", description: "Organizing content and flow" },
-      { title: "Wireframing", description: "Creating the structural blueprint" },
+      {
+        title: "Research",
+        description: "Understanding users and business requirements",
+      },
+      {
+        title: "Information Architecture",
+        description: "Organizing content and flow",
+      },
+      {
+        title: "Wireframing",
+        description: "Creating the structural blueprint",
+      },
       { title: "Prototyping", description: "Building interactive models" },
-      { title: "Visual Design", description: "Applying brand and visual elements" },
+      {
+        title: "Visual Design",
+        description: "Applying brand and visual elements",
+      },
       { title: "Testing", description: "Validating designs with real users" },
     ],
     faqs: [
@@ -142,23 +285,48 @@ export const services = [
     id: 4,
     title: "Digital Marketing",
     slug: "digital-marketing",
-    shortDescription: "Strategic marketing solutions to grow your online presence and drive conversions.",
+    shortDescription:
+      "Strategic marketing solutions to grow your online presence and drive conversions.",
     icon: "BarChart",
     coverImage: "/images/services/digital-marketing.jpg",
     longDescription:
       "Our digital marketing services help you reach your target audience, build brand awareness, and drive conversions. We create data-driven strategies tailored to your business goals and market position.",
     features: [
       { title: "SEO", description: "Improve your search engine rankings" },
-      { title: "Content Marketing", description: "Engage your audience with valuable content" },
-      { title: "Social Media", description: "Build community and brand awareness" },
-      { title: "PPC Advertising", description: "Drive targeted traffic and conversions" },
+      {
+        title: "Content Marketing",
+        description: "Engage your audience with valuable content",
+      },
+      {
+        title: "Social Media",
+        description: "Build community and brand awareness",
+      },
+      {
+        title: "PPC Advertising",
+        description: "Drive targeted traffic and conversions",
+      },
     ],
     process: [
-      { title: "Audit", description: "Analyzing your current digital presence" },
-      { title: "Strategy", description: "Developing a tailored marketing plan" },
-      { title: "Implementation", description: "Executing campaigns across channels" },
-      { title: "Optimization", description: "Refining based on performance data" },
-      { title: "Reporting", description: "Transparent communication of results" },
+      {
+        title: "Audit",
+        description: "Analyzing your current digital presence",
+      },
+      {
+        title: "Strategy",
+        description: "Developing a tailored marketing plan",
+      },
+      {
+        title: "Implementation",
+        description: "Executing campaigns across channels",
+      },
+      {
+        title: "Optimization",
+        description: "Refining based on performance data",
+      },
+      {
+        title: "Reporting",
+        description: "Transparent communication of results",
+      },
     ],
     faqs: [
       {
@@ -183,72 +351,49 @@ export const services = [
       },
     ],
   },
+
   {
-    id: 5,
-    title: "E-commerce Solutions",
-    slug: "e-commerce",
-    shortDescription: "Custom online stores that drive sales and provide exceptional shopping experiences.",
-    icon: "ShoppingCart",
-    coverImage: "/images/services/e-commerce.jpg",
-    longDescription:
-      "Our e-commerce solutions help businesses sell products and services online with custom storefronts that are designed to convert. We build scalable, secure online stores that provide seamless shopping experiences.",
-    features: [
-      { title: "Custom Storefronts", description: "Unique designs that reflect your brand" },
-      { title: "Payment Integration", description: "Secure, flexible payment options" },
-      { title: "Inventory Management", description: "Efficient product and stock control" },
-      { title: "Analytics & Reporting", description: "Data-driven insights for growth" },
-    ],
-    process: [
-      { title: "Discovery", description: "Understanding your products and customers" },
-      { title: "Architecture", description: "Planning your store structure and features" },
-      { title: "Design", description: "Creating an engaging shopping experience" },
-      { title: "Development", description: "Building your custom e-commerce platform" },
-      { title: "Testing", description: "Ensuring everything works flawlessly" },
-      { title: "Launch", description: "Taking your store live" },
-    ],
-    faqs: [
-      {
-        question: "Which e-commerce platform do you recommend?",
-        answer:
-          "We work with various platforms including Shopify, WooCommerce, and custom solutions. Our recommendation depends on your specific needs, product volume, customization requirements, and budget.",
-      },
-      {
-        question: "Can you migrate my existing online store?",
-        answer:
-          "Yes, we can migrate your existing store to a new platform while preserving your products, customers, and order history. We ensure a smooth transition with minimal disruption to your business.",
-      },
-      {
-        question: "Do you integrate with payment gateways and shipping providers?",
-        answer:
-          "Absolutely. We integrate with all major payment gateways (Stripe, PayPal, etc.) and shipping providers to create a seamless checkout experience for your customers.",
-      },
-      {
-        question: "How do you handle e-commerce security?",
-        answer:
-          "Security is paramount for e-commerce. We implement SSL certificates, PCI compliance, secure payment processing, regular security updates, and follow best practices to protect your store and customer data.",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Custom Software Development",
-    slug: "custom-software",
-    shortDescription: "Tailored software solutions that solve your unique business challenges.",
+    id: 9,
+    title: "Graphic Design",
+    slug: "graphic-design",
+    shortDescription:
+      "Tailored software solutions that solve your unique business challenges.",
     icon: "Settings",
     coverImage: "/images/services/custom-software.jpg",
     longDescription:
       "Our custom software development services deliver tailored solutions that address your specific business challenges. We build scalable, maintainable software that streamlines operations and drives growth.",
     features: [
-      { title: "Bespoke Solutions", description: "Software built specifically for your needs" },
-      { title: "Scalable Architecture", description: "Systems that grow with your business" },
-      { title: "Integration Capabilities", description: "Connect with your existing tools" },
-      { title: "Ongoing Support", description: "Continuous improvement and maintenance" },
+      {
+        title: "Bespoke Solutions",
+        description: "Software built specifically for your needs",
+      },
+      {
+        title: "Scalable Architecture",
+        description: "Systems that grow with your business",
+      },
+      {
+        title: "Integration Capabilities",
+        description: "Connect with your existing tools",
+      },
+      {
+        title: "Ongoing Support",
+        description: "Continuous improvement and maintenance",
+      },
     ],
     process: [
-      { title: "Requirements Analysis", description: "Defining your software needs in detail" },
-      { title: "System Design", description: "Creating the technical architecture" },
+      {
+        title: "Requirements Analysis",
+        description: "Defining your software needs in detail",
+      },
+      {
+        title: "System Design",
+        description: "Creating the technical architecture",
+      },
       { title: "Development", description: "Building your custom solution" },
-      { title: "Quality Assurance", description: "Rigorous testing to ensure reliability" },
+      {
+        title: "Quality Assurance",
+        description: "Rigorous testing to ensure reliability",
+      },
       { title: "Deployment", description: "Implementing your software" },
       { title: "Maintenance", description: "Ongoing support and improvements" },
     ],
@@ -275,7 +420,143 @@ export const services = [
       },
     ],
   },
-]
+  {
+    id: 6,
+    title: "WordPress Development",
+    slug: "wordPress-development",
+    shortDescription:
+      "Tailored software solutions that solve your unique business challenges.",
+    icon: "Settings",
+    coverImage: "/images/services/custom-software.jpg",
+    longDescription:
+      "Our custom software development services deliver tailored solutions that address your specific business challenges. We build scalable, maintainable software that streamlines operations and drives growth.",
+    features: [
+      {
+        title: "Bespoke Solutions",
+        description: "Software built specifically for your needs",
+      },
+      {
+        title: "Scalable Architecture",
+        description: "Systems that grow with your business",
+      },
+      {
+        title: "Integration Capabilities",
+        description: "Connect with your existing tools",
+      },
+      {
+        title: "Ongoing Support",
+        description: "Continuous improvement and maintenance",
+      },
+    ],
+    process: [
+      {
+        title: "Requirements Analysis",
+        description: "Defining your software needs in detail",
+      },
+      {
+        title: "System Design",
+        description: "Creating the technical architecture",
+      },
+      { title: "Development", description: "Building your custom solution" },
+      {
+        title: "Quality Assurance",
+        description: "Rigorous testing to ensure reliability",
+      },
+      { title: "Deployment", description: "Implementing your software" },
+      { title: "Maintenance", description: "Ongoing support and improvements" },
+    ],
+    faqs: [
+      {
+        question: "How much does custom software development cost?",
+        answer:
+          "Custom software costs vary widely based on complexity and requirements. Small projects typically start at $50,000, while enterprise solutions can range from $100,000 to $500,000+. We provide detailed estimates after understanding your specific needs.",
+      },
+      {
+        question: "How long does custom software development take?",
+        answer:
+          "Development timelines typically range from 4-12 months depending on project scope. We often use an agile approach to deliver functionality in phases, allowing you to start using parts of the system earlier.",
+      },
+      {
+        question: "Do you provide documentation and training?",
+        answer:
+          "Yes, we provide comprehensive documentation for all custom software, including user guides and technical documentation. We also offer training sessions to ensure your team can effectively use the new system.",
+      },
+      {
+        question: "What happens after the software is launched?",
+        answer:
+          "We offer ongoing maintenance and support packages to ensure your software continues to run smoothly. This includes bug fixes, security updates, and feature enhancements as your business evolves.",
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: "Custom Software Development",
+    slug: "custom-software",
+    shortDescription:
+      "Tailored software solutions that solve your unique business challenges.",
+    icon: "Settings",
+    coverImage: "/images/services/custom-software.jpg",
+    longDescription:
+      "Our custom software development services deliver tailored solutions that address your specific business challenges. We build scalable, maintainable software that streamlines operations and drives growth.",
+    features: [
+      {
+        title: "Bespoke Solutions",
+        description: "Software built specifically for your needs",
+      },
+      {
+        title: "Scalable Architecture",
+        description: "Systems that grow with your business",
+      },
+      {
+        title: "Integration Capabilities",
+        description: "Connect with your existing tools",
+      },
+      {
+        title: "Ongoing Support",
+        description: "Continuous improvement and maintenance",
+      },
+    ],
+    process: [
+      {
+        title: "Requirements Analysis",
+        description: "Defining your software needs in detail",
+      },
+      {
+        title: "System Design",
+        description: "Creating the technical architecture",
+      },
+      { title: "Development", description: "Building your custom solution" },
+      {
+        title: "Quality Assurance",
+        description: "Rigorous testing to ensure reliability",
+      },
+      { title: "Deployment", description: "Implementing your software" },
+      { title: "Maintenance", description: "Ongoing support and improvements" },
+    ],
+    faqs: [
+      {
+        question: "How much does custom software development cost?",
+        answer:
+          "Custom software costs vary widely based on complexity and requirements. Small projects typically start at $50,000, while enterprise solutions can range from $100,000 to $500,000+. We provide detailed estimates after understanding your specific needs.",
+      },
+      {
+        question: "How long does custom software development take?",
+        answer:
+          "Development timelines typically range from 4-12 months depending on project scope. We often use an agile approach to deliver functionality in phases, allowing you to start using parts of the system earlier.",
+      },
+      {
+        question: "Do you provide documentation and training?",
+        answer:
+          "Yes, we provide comprehensive documentation for all custom software, including user guides and technical documentation. We also offer training sessions to ensure your team can effectively use the new system.",
+      },
+      {
+        question: "What happens after the software is launched?",
+        answer:
+          "We offer ongoing maintenance and support packages to ensure your software continues to run smoothly. This includes bug fixes, security updates, and feature enhancements as your business evolves.",
+      },
+    ],
+  },
+];
 
 // Portfolio data
 export const portfolioItems = [
@@ -351,7 +632,7 @@ export const portfolioItems = [
     link: "#",
     technologies: ["React", "Node.js", "GraphQL", "MongoDB", "AWS S3"],
   },
-]
+];
 
 // Pricing data
 export const pricingPlans = [
@@ -408,7 +689,7 @@ export const pricingPlans = [
     ],
     popular: false,
   },
-]
+];
 
 // Team members data
 export const teamMembers = [
@@ -480,7 +761,7 @@ export const teamMembers = [
       twitter: "#",
     },
   },
-]
+];
 
 // Testimonials data
 export const testimonials = [
@@ -516,7 +797,7 @@ export const testimonials = [
       "The team at DevForge truly understood our vision and translated it into a beautiful, functional website. Their development process was transparent and collaborative from start to finish.",
     image: "/images/testimonials/daniel.jpg",
   },
-]
+];
 
 // Company stats
 export const companyStats = [
@@ -540,4 +821,4 @@ export const companyStats = [
     value: "24/7",
     label: "Support",
   },
-]
+];
